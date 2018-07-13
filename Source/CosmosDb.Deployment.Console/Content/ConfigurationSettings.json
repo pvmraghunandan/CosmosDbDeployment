@@ -1,0 +1,27 @@
+﻿{
+  "Databases": [
+    {
+      "Name": "sample",
+      "Collections": [
+        {
+          "Name": "test",
+          "ResourceUnits": 10100,
+          "Partitioned": true,
+          "PartitionKey": "/partitionid",
+          "TTL": -1,
+          "IndexingMode": 1,
+          "IncludedPaths": [ "/docType/*", "/trx/doc/*"],
+          "ExcludedPaths": [ "/*" ],
+          "RangeIndexIncludedPaths": [ "/trx/doc/trxdatetime/*" ],
+          "StoredProcedures": [
+          ]
+        }
+      ],
+      "Users": [
+        {
+          "Name": "test"
+        }
+      ]
+    }
+  ]
+}
