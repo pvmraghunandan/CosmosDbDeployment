@@ -39,8 +39,9 @@ namespace CosmosDb.Deployment.Console
 
                 RunDocumentDbDeploymentAsync(verbOptions).GetAwaiter().GetResult();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Logger.Log(LogLevel.Error, ex);
                 return -1;
             }
 
